@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>À propos de moi - NOM PRENOM</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/about.css">
+    <script src="../js/main.js" defer></script>
+    <script src="../js/languageSwitch.js" defer></script>
+</head>
+<body>
+    <!-- Header -->
+    <header class="main-header">
+        <div class="header-left">
+            <a href="/" class="logo">NOM PRENOM</a>
+            <div class="language-selector">
+                <span class="current-lang">fr</span>
+                <div class="lang-dropdown">
+                    <a href="#" data-lang="fr">fr</a>
+                    <a href="#" data-lang="en">en</a>
+                </div>
+            </div>
+        </div>
+        <nav class="main-nav">
+            <a href="/pages/about.html">À propos de moi</a>
+            <span class="separator">|</span>
+            <a href="/pages/projects.html">Projets</a>
+            <span class="separator">|</span>
+            <a href="/pages/contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <main class="about-content">
+        <!-- Section Introduction -->
+        <section class="intro-section">
+            <div class="profile-image">
+                <img src="../assets/images/profile-placeholder.jpg" alt="Photo de profil">
+            </div>
+            <div class="intro-text">
+                <h1>À propos de moi</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            </div>
+        </section>
+
+        <!-- Section Compétences -->
+        <section class="skills-section">
+            <div class="hard-skills">
+                <h2>Hard Skills</h2>
+                <div class="skills-grid">
+                    <div class="skill-card">
+                        <h3>Langages de programmation</h3>
+                        <ul>
+                            <li>C++</li>
+                            <li>CUDA</li>
+                            <li>Python</li>
+                        </ul>
+                    </div>
+                    <div class="skill-card">
+                        <h3>Frameworks & Outils</h3>
+                        <ul>
+                            <li>OpenCV</li>
+                            <li>TensorFlow</li>
+                            <li>Git</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="soft-skills">
+                <h2>Soft Skills</h2>
+                <div class="skills-grid">
+                    <div class="skill-card">
+                        <ul>
+                            <li>Résolution de problèmes</li>
+                            <li>Travail en équipe</li>
+                            <li>Communication</li>
+                            <li>Gestion de projet</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section Langues -->
+        <section class="languages-section">
+            <h2>Langues</h2>
+            <div class="language-grid">
+                <div class="language-card">
+                    <h3>Français</h3>
+                    <p>Langue maternelle</p>
+                </div>
+                <div class="language-card">
+                    <h3>Anglais</h3>
+                    <p>Bilingue - C1</p>
+                </div>
+                <div class="language-card">
+                    <h3>Espagnol</h3>
+                    <p>Niveau scolaire - B1</p>
+                </div>
+                <div class="language-card">
+                    <h3>Japonais</h3>
+                    <p>Basique - N5</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section Parcours -->
+        <section class="timeline-section">
+            <h2>Parcours</h2>
+            
+            <div class="timeline">
+                <!-- Éducation -->
+                <div class="timeline-block">
+                    <h3>Formation</h3>
+                    <div class="timeline-item">
+                        <div class="date">2019 - 2024</div>
+                        <div class="content">
+                            <h4>EPITA - Diplôme d'Ingénieur</h4>
+                            <p>Majeure IMAGE: spécialisation en intelligence artificielle et vision par ordinateur</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Expérience professionnelle -->
+                <div class="timeline-block">
+                    <h3>Expérience professionnelle</h3>
+                    <div class="timeline-item">
+                        <div class="date">2023 - Présent</div>
+                        <div class="content">
+                            <h4>Développeur Computer Vision</h4>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="date">2022 - 2023</div>
+                        <div class="content">
+                            <h4>Stage - Deep Learning Engineer</h4>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <p>&copy; 2025 NOM PRENOM - Tous droits réservés</p>
+    </footer>
+</body>
+</html>
