@@ -1,0 +1,140 @@
+/* Contact page styles */
+.contact-content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+}
+
+.contact-content h1 {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 3rem;
+    color: var(--primary-color);
+}
+
+.contact-container {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.contact-section {
+    background-color: #f8f9fa;
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.contact-section:hover {
+    transform: translateY(-5px);
+}
+
+.contact-section h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    color: var(--primary-color);
+    border-bottom: 2px solid var(--accent-color);
+    padding-bottom: 0.5rem;
+}
+
+.contact-link {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    text-decoration: none;
+    color: var(--primary-color);
+    background-color: white;
+    border-radius: var(--border-radius);
+    transition: all 0.3s ease;
+}
+
+.contact-link:hover {
+    background-color: var(--accent-color);
+    color: white;
+    transform: translateX(10px);
+}
+
+.contact-link .icon {
+    font-size: 1.5rem;
+}
+
+.contact-link .platform-name {
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+/* Specific platform styles */
+.malt-link {
+    border-left: 4px solid #FC5656;
+}
+
+.linkedin-link {
+    border-left: 4px solid #0077B5;
+}
+
+.email-link {
+    border-left: 4px solid #34A853;
+}
+
+/* Animation on page load */
+.contact-section {
+    opacity: 0;
+    animation: fadeInUp 0.5s ease forwards;
+}
+
+.contact-section:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.contact-section:nth-child(3) {
+    animation-delay: 0.4s;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .contact-content h1 {
+        font-size: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    .contact-container {
+        gap: 2rem;
+    }
+
+    .contact-section {
+        padding: 1.5rem;
+    }
+
+    .contact-link {
+        padding: 0.8rem;
+    }
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+    .contact-section {
+        background-color: #2a2a2a;
+    }
+
+    .contact-link {
+        background-color: #333;
+        color: white;
+    }
+
+    .contact-link:hover {
+        background-color: var(--accent-color);
+    }
+}
