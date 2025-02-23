@@ -1,0 +1,114 @@
+<!-- Header HTML -->
+<header class="main-header">
+    <div class="header-left">
+        <a href="/" class="logo">NOM PRENOM</a>
+        <div class="language-selector">
+            <span class="current-lang">fr</span>
+            <div class="lang-dropdown">
+                <a href="#" data-lang="fr">fr</a>
+                <a href="#" data-lang="en">en</a>
+            </div>
+        </div>
+    </div>
+    <nav class="main-nav">
+        <a href="/pages/about.html">À propos de moi</a>
+        <span class="separator">|</span>
+        <a href="/pages/projects.html">Projets</a>
+        <span class="separator">|</span>
+        <a href="/pages/contact.html">Contact</a>
+    </nav>
+</header>
+
+<!-- CSS correspondant -->
+<style>
+.main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    border-bottom: 1px solid #red;
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.logo {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.language-selector {
+    position: relative;
+    cursor: pointer;
+}
+
+.current-lang {
+    padding: 0.2rem 0.5rem;
+}
+
+.lang-dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: white;
+    border: 1px solid #ddd;
+    padding: 0.5rem;
+}
+
+.language-selector:hover .lang-dropdown {
+    display: block;
+}
+
+.main-nav {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.separator {
+    color: #666;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .main-header {
+        flex-direction: column;
+        gap: 1rem;
+        padding: 1rem;
+    }
+    
+    .main-nav {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+</style>
+
+<!-- JavaScript pour le sélecteur de langue -->
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    const langSelector = document.querySelector('.language-selector');
+    const currentLang = document.querySelector('.current-lang');
+    
+    document.querySelectorAll('.lang-dropdown a').forEach(link => {
+        link.addEventListener('click', (e) => {
+            e.preventDefault();
+            const newLang = e.target.dataset.lang;
+            currentLang.textContent = newLang;
+            // Ici, ajoutez la logique pour changer la langue du site
+            changeLanguage(newLang);
+        });
+    });
+});
+
+function changeLanguage(lang) {
+    // Cette fonction sera implémentée dans translation.js
+    console.log(`Changing language to: ${lang}`);
+}
+</script>
