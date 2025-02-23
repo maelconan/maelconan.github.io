@@ -1,114 +1,91 @@
-<!-- Header HTML -->
-<header class="main-header">
-    <div class="header-left">
-        <a href="/" class="logo">NOM PRENOM</a>
-        <div class="language-selector">
-            <span class="current-lang">fr</span>
-            <div class="lang-dropdown">
-                <a href="#" data-lang="fr">fr</a>
-                <a href="#" data-lang="en">en</a>
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - NOM PRENOM</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/header.css">
+    <script src="js/main.js" defer></script>
+    <script src="js/languageSwitch.js" defer></script>
+</head>
+<body>
+    <!-- Header -->
+    <header class="main-header">
+        <div class="header-left">
+            <a href="/" class="logo">NOM PRENOM</a>
+            <div class="language-selector">
+                <span class="current-lang">fr</span>
+                <div class="lang-dropdown">
+                    <a href="#" data-lang="fr">fr</a>
+                    <a href="#" data-lang="en">en</a>
+                </div>
             </div>
         </div>
-    </div>
-    <nav class="main-nav">
-        <a href="/pages/about.html">À propos de moi</a>
-        <span class="separator">|</span>
-        <a href="/pages/projects.html">Projets</a>
-        <span class="separator">|</span>
-        <a href="/pages/contact.html">Contact</a>
-    </nav>
-</header>
+        <nav class="main-nav">
+            <a href="/pages/about.html">À propos de moi</a>
+            <span class="separator">|</span>
+            <a href="/pages/projects.html">Projets</a>
+            <span class="separator">|</span>
+            <a href="/pages/contact.html">Contact</a>
+        </nav>
+    </header>
 
-<!-- CSS correspondant -->
-<style>
-.main-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem 2rem;
-    border-bottom: 1px solid #red;
-}
+    <!-- Main content -->
+    <main class="home-content">
+        <section class="hero">
+            <h1 class="hero-title">Bienvenue sur mon Portfolio</h1>
+            <p class="hero-subtitle">Développeur Full Stack & Spécialiste en Computer Vision</p>
+        </section>
 
-.header-left {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-}
+        <section class="featured-projects">
+            <h2>Projets mis en avant</h2>
+            <div class="projects-grid">
+                <!-- Exemple de projet -->
+                <article class="project-card">
+                    <div class="project-image">
+                        <img src="/assets/images/placeholder.jpg" alt="Projet Computer Vision">
+                    </div>
+                    <div class="project-content">
+                        <h3>Projet Computer Vision</h3>
+                        <p>Détection d'objets en temps réel avec CUDA et C++</p>
+                        <div class="project-technologies">
+                            <span class="tech-tag">CUDA</span>
+                            <span class="tech-tag">C++</span>
+                            <span class="tech-tag">Computer Vision</span>
+                        </div>
+                        <a href="/pages/projects/computer-vision.html" class="project-link">En savoir plus</a>
+                    </div>
+                </article>
+                <!-- D'autres projets seront ajoutés dynamiquement via JavaScript -->
+            </div>
+        </section>
 
-.logo {
-    text-decoration: none;
-    color: black;
-    font-weight: bold;
-    text-transform: uppercase;
-}
+        <section class="skills-preview">
+            <h2>Compétences clés</h2>
+            <div class="skills-container">
+                <div class="skill-category">
+                    <h3>Langages</h3>
+                    <div class="skills-list">
+                        <span class="skill-tag">C++</span>
+                        <span class="skill-tag">CUDA</span>
+                        <span class="skill-tag">Python</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>Domaines d'expertise</h3>
+                    <div class="skills-list">
+                        <span class="skill-tag">Computer Vision</span>
+                        <span class="skill-tag">Deep Learning</span>
+                        <span class="skill-tag">Développement Full Stack</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
 
-.language-selector {
-    position: relative;
-    cursor: pointer;
-}
-
-.current-lang {
-    padding: 0.2rem 0.5rem;
-}
-
-.lang-dropdown {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background: white;
-    border: 1px solid #ddd;
-    padding: 0.5rem;
-}
-
-.language-selector:hover .lang-dropdown {
-    display: block;
-}
-
-.main-nav {
-    display: flex;
-    gap: 1rem;
-    align-items: center;
-}
-
-.separator {
-    color: #666;
-}
-
-/* Responsive design */
-@media (max-width: 768px) {
-    .main-header {
-        flex-direction: column;
-        gap: 1rem;
-        padding: 1rem;
-    }
-    
-    .main-nav {
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-}
-</style>
-
-<!-- JavaScript pour le sélecteur de langue -->
-<script>
-document.addEventListener('DOMContentLoaded', () => {
-    const langSelector = document.querySelector('.language-selector');
-    const currentLang = document.querySelector('.current-lang');
-    
-    document.querySelectorAll('.lang-dropdown a').forEach(link => {
-        link.addEventListener('click', (e) => {
-            e.preventDefault();
-            const newLang = e.target.dataset.lang;
-            currentLang.textContent = newLang;
-            // Ici, ajoutez la logique pour changer la langue du site
-            changeLanguage(newLang);
-        });
-    });
-});
-
-function changeLanguage(lang) {
-    // Cette fonction sera implémentée dans translation.js
-    console.log(`Changing language to: ${lang}`);
-}
-</script>
+    <footer class="main-footer">
+        <p>&copy; 2025 NOM PRENOM - Tous droits réservés</p>
+    </footer>
+</body>
+</html>
