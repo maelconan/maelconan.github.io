@@ -56,8 +56,14 @@
     transform: translateX(10px);
 }
 
-.contact-link .icon {
-    font-size: 1.5rem;
+.platform-icon {
+    width: 24px;
+    height: 24px;
+    transition: transform 0.3s ease;
+}
+
+.contact-link:hover .platform-icon {
+    transform: scale(1.1);
 }
 
 .contact-link .platform-name {
