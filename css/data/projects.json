@@ -1,0 +1,59 @@
+{
+  "projects": [
+    {
+      "id": "computer-vision-1",
+      "title": "Détection d'objets en temps réel",
+      "shortDescription": "Système de détection d'objets utilisant CUDA et C++ pour des performances optimales",
+      "fullDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "thumbnail": "/assets/images/projects/cv-project-1.jpg",
+      "images": [
+        "/assets/images/projects/cv-project-1-detail-1.jpg",
+        "/assets/images/projects/cv-project-1-detail-2.jpg"
+      ],
+      "technologies": ["C++", "CUDA"],
+      "categories": ["Computer Vision", "Deep Learning"],
+      "githubLink": "https://github.com/username/project1",
+      "date": "2024-02-15"
+    },
+    {
+      "id": "deep-learning-1",
+      "title": "Classification d'images par Deep Learning",
+      "shortDescription": "Modèle de deep learning pour la classification d'images médicales",
+      "fullDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      "thumbnail": "/assets/images/projects/dl-project-1.jpg",
+      "images": [
+        "/assets/images/projects/dl-project-1-detail-1.jpg"
+      ],
+      "technologies": ["Python", "TensorFlow"],
+      "categories": ["Deep Learning"],
+      "githubLink": "https://github.com/username/project2",
+      "date": "2024-01-20"
+    },
+    {
+      "id": "cv-optimization",
+      "title": "Optimisation de pipeline Computer Vision",
+      "shortDescription": "Amélioration des performances d'un pipeline de traitement d'images",
+      "fullDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      "thumbnail": "/assets/images/projects/cv-project-2.jpg",
+      "images": [
+        "/assets/images/projects/cv-project-2-detail-1.jpg"
+      ],
+      "technologies": ["C++", "OpenCV", "CUDA"],
+      "categories": ["Computer Vision", "Optimisation"],
+      "githubLink": "https://github.com/username/project3",
+      "date": "2023-12-10"
+    }
+  ],
+  "technologies": [
+    "C++",
+    "CUDA",
+    "Python",
+    "TensorFlow",
+    "OpenCV"
+  ],
+  "categories": [
+    "Computer Vision",
+    "Deep Learning",
+    "Optimisation"
+  ]
+}

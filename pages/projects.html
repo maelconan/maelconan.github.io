@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projets - NOM PRENOM</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/projects.css">
+    <script src="../js/main.js" defer></script>
+    <script src="../js/projects.js" defer></script>
+    <script src="../js/languageSwitch.js" defer></script>
+</head>
+<body>
+    <!-- Header -->
+    <header class="main-header">
+        <div class="header-left">
+            <a href="/" class="logo">NOM PRENOM</a>
+            <div class="language-selector">
+                <span class="current-lang">fr</span>
+                <div class="lang-dropdown">
+                    <a href="#" data-lang="fr">fr</a>
+                    <a href="#" data-lang="en">en</a>
+                </div>
+            </div>
+        </div>
+        <nav class="main-nav">
+            <a href="/pages/about.html">À propos de moi</a>
+            <span class="separator">|</span>
+            <a href="/pages/projects.html">Projets</a>
+            <span class="separator">|</span>
+            <a href="/pages/contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <main class="projects-content">
+        <h1>Mes Projets</h1>
+
+        <!-- Filtres et tri -->
+        <div class="projects-controls">
+            <!-- Filtres -->
+            <div class="filters">
+                <div class="filter-group">
+                    <label for="category-filter">Catégorie:</label>
+                    <select id="category-filter">
+                        <option value="">Toutes les catégories</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label for="technology-filter">Technologie:</label>
+                    <select id="technology-filter">
+                        <option value="">Toutes les technologies</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Tri -->
+            <div class="sort">
+                <label for="sort-select">Trier par:</label>
+                <select id="sort-select">
+                    <option value="date-desc">Date (plus récent)</option>
+                    <option value="date-asc">Date (plus ancien)</option>
+                    <option value="title">Titre</option>
+                </select>
+            </div>
+        </div>
+
+        <!-- Grille des projets -->
+        <div class="projects-grid">
+            <!-- Les projets seront injectés ici via JavaScript -->
+        </div>
+
+        <!-- Template pour les cartes de projet -->
+        <template id="project-card-template">
+            <article class="project-card">
+                <div class="project-image">
+                    <img src="" alt="">
+                </div>
+                <div class="project-content">
+                    <h2 class="project-title"></h2>
+                    <p class="project-description"></p>
+                    <div class="project-technologies"></div>
+                    <div class="project-categories"></div>
+                    <a href="#" class="project-link">En savoir plus</a>
+                </div>
+            </article>
+        </template>
+    </main>
+
+    <footer class="main-footer">
+        <p>&copy; 2025 NOM PRENOM - Tous droits réservés</p>
+    </footer>
+</body>
+</html>
